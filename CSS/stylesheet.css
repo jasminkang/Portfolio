@@ -1,0 +1,442 @@
+/*Stylesheet*/
+/*format header for all pages*/
+
+.flex-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+header {
+  width: 100%;
+}
+h1 {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 40px;
+  margin-left: 30px;
+}
+@media screen and (max-width: 570px) {
+  h1 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 20px;
+  }
+}
+/*format footer for all pages*/
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding-top: 15px;
+  height: 40px;
+  text-align: center;
+  font-family: "Tajawal", sans-serif;
+  width: 100%;
+  font-size: 16px;
+  background-color: grey;
+  border-radius: 4px;
+  text-decoration: none;
+  color: white;
+  font-family: "Tajawal", sans-serif;
+}
+
+footer > a:-webkit-any-link {
+  color: white;
+}
+.fa {
+  padding-left: 20px;
+}
+/*overall format h2-h4, paragraph styles*/
+h2 {
+  font-family: "Tajawal", sans-serif;
+  font-size: 24px;
+  margin-left: 20px;
+}
+h3 {
+  font-family: "Tajawal", sans-serif;
+}
+h4 {
+  font-family: "Tajawal", sans-serif;
+}
+p {
+  font-family: "Tajawal", sans-serif;
+  margin-left: 20px;
+}
+
+/*format nav bar all pages*/
+nav {
+  font-family: "Tajawal", sans-serif;
+  border-radius: 20px;
+  float: right;
+}
+@media screen and (max-width: 450px) {
+  nav {
+    font-size: 10px;
+  }
+}
+.not_active {
+  background-color: #fcfcfc;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.active {
+  border-color: #f7f8fa;
+  border-style: inset;
+  border-radius: 4px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-width: 1px;
+}
+
+/*Homepage formatting for mobile screen*/
+.Home1 {
+  width: 100%;
+  height: 60%;
+  font-size: 15px;
+  margin-left: 10px;
+}
+/*Homepage formatting for desktop*/
+@media screen and (min-width: 950px) {
+  .Home1 {
+    width: 72%;
+    font-size: 20px;
+    padding: 50px 10px 10px 10px;
+  }
+}
+@media screen and (min-height: 900px) {
+  .Home1 {
+    margin-top: 100px;
+  }
+}
+.Home1 > h2 {
+  margin-top: 50px;
+}
+/*Homepage formatting for mobile screen*/
+.Home2 {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  bottom: 15%;
+}
+/*Homepage formatting for desktop*/
+@media screen and (min-width: 950px) {
+  .Home2 {
+    width: 25%;
+    position: relative;
+  }
+}
+@media screen and (min-height: 900px) {
+  .Home2 {
+    margin-top: 100px;
+  }
+}
+/*image format - homepage*/
+.MyAvatar {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: pink;
+  border-radius: 50%;
+  margin-bottom: 2%;
+}
+
+.skillslogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*default link styles*/
+a:visited {
+  text-decoration: none;
+  color: darkslategrey;
+  font-family: "Tajawal", sans-serif;
+}
+a:-webkit-any-link {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 700px) {
+  .contactsection {
+    height: 100px;
+  }
+}
+
+/*About page formatting for mobile */
+.About1 {
+  width: 100%;
+  height: auto;
+  padding: 10px 30px 10px 20px;
+  display: block;
+  font-size: 12px;
+  display: block;
+}
+/*About page formatting for desktop */
+@media screen and (min-width: 950px) {
+  .About1 {
+    width: 63%;
+    font-size: 20px;
+    padding-right: 30px;
+  }
+}
+@media screen and (min-height: 900px) {
+  .About1 {
+    margin-top: 100px;
+  }
+}
+/*About page formatting for mobile (default) */
+.About2 > p {
+  text-align: center;
+}
+/*About page formatting for mobile (galaxyfold) */
+@media screen and (max-width: 280px) {
+  .About2 {
+    position: fixed;
+    bottom: 10%;
+  }
+}
+
+/*About page formatting for desktop */
+@media screen and (min-width: 950px) {
+  .About2 {
+    width: 30%;
+    display: block;
+    margin-top: 50px;
+  }
+}
+@media screen and (min-height: 900px) {
+  .About2 {
+    margin-top: 100px;
+  }
+}
+/*About page formatting - images*/
+.About2 > picture > img {
+  border-radius: 4px;
+}
+
+/* Work & Study page formatting*/
+.CV {
+  padding: 10px;
+}
+@media screen and (min-height: 900px) {
+  .CV {
+    padding-top: 100px;
+  }
+}
+.CV > p {
+  font-size: 20px;
+  width: 100%;
+}
+.study {
+  width: 100%;
+  float: left;
+  text-align: left;
+  margin-bottom: 10%;
+}
+
+@media screen and (min-width: 900px) {
+  .study {
+    width: 25%;
+  }
+}
+.study > p {
+  margin: 0;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+.study > h2 {
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-top: 0px;
+}
+.study > h3 {
+  margin: 0;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.study > h4 {
+  margin: 0;
+  margin-left: 20px;
+}
+
+.work {
+  width: 100%;
+  float: right;
+  text-align: left;
+  margin-bottom: 2%;
+}
+@media screen and (min-width: 900px) {
+  .work {
+    width: 70%;
+    margin-left: 5%;
+  }
+}
+.work > p {
+  margin: 0;
+  line-height: 18px;
+}
+.work > h3 {
+  margin: 0;
+  margin-top: 15px;
+}
+.work > h2 {
+  margin: 0;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.work > h4 {
+  margin: 0;
+}
+/*Blog menu page display formatting, carried over to main blog page with articles*/
+
+.blogWrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 50px;
+}
+@media screen and (min-height: 900px) {
+  .blogWrap {
+    margin-top: 100px;
+  }
+}
+article {
+  display: inline;
+  width: 15%;
+  text-align: center;
+}
+@media screen and (max-width: 900px) {
+  article {
+    width: 23%;
+    padding: 2%;
+  }
+}
+@media screen and (max-width: 400px) {
+  article {
+    width: 30%;
+    padding: 1%;
+  }
+}
+@media screen and (max-width: 300px) {
+  article {
+    width: 40%;
+    padding: 1%;
+  }
+}
+.Blogs > h2 {
+  padding: 20px;
+}
+/*Blog menu page link styles*/
+
+article > a:link {
+  text-decoration: underline;
+  font-weight: bold;
+  color: darkslategrey;
+  font-family: "Tajawal", sans-serif;
+}
+
+/*Contact page*/
+/*Contact page formatting for mobile*/
+.contactsection {
+  width: 90%;
+  background-color: #fcfcfc;
+  padding: 20px 10px 60px 10px;
+  border-radius: 8px;
+  height: auto;
+  margin-top: 10%;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+/*Contact page formatting for desktop*/
+@media screen and (min-width: 800px) {
+  .contactsection {
+    width: 97%;
+    height: auto;
+    margin-top: 1%;
+  }
+}
+@media screen and (min-height: 900px) {
+  .contactsection {
+    margin-top: 100px;
+  }
+}
+.contactform {
+  width: 60%;
+}
+
+input[type="text"],
+[type="email"] {
+  width: 100%;
+  display: block;
+  padding: 1%;
+  margin-bottom: 2%;
+  font-family: "Tajawal", sans-serif;
+}
+
+#message {
+  width: 101.7%;
+  font-family: "Tajawal", sans-serif;
+}
+
+input [type="submit"] {
+  display: block;
+}
+
+.send {
+  display: block;
+  margin-top: 2%;
+  font-family: "Tajawal", sans-serif;
+}
+
+/*image format - contactpage*/
+.MyAvatarContact {
+  background-color: pink;
+  border-radius: 50%;
+  margin-bottom: 5%;
+  float: right;
+  margin-right: 5%;
+}
+
+/*Blog page(with articles)*/
+.blog_right {
+  width: 100%;
+  margin: 1%;
+}
+.blog_right > p {
+  width: 70%;
+  float: right;
+  text-align: left;
+}
+
+@media screen and (min-width: 800px) {
+  .blog_right > p {
+    width: 80%;
+  }
+}
+.blog_right > picture > img {
+  float: left;
+}
+.blog_left {
+  width: 100%;
+  margin: 1%;
+}
+.blog_left > p {
+  width: 70%;
+  float: left;
+  text-align: right;
+}
+
+@media screen and (min-width: 800px) {
+  .blog_left > p {
+    width: 80%;
+  }
+}
+.blog_left > picture > img {
+  float: right;
+}
