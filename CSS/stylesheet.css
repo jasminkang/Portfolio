@@ -1,49 +1,75 @@
 /*Stylesheet*/
-/*format header for all pages*/
 
+/*overall default flexbox*/
 .flex-container {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-header {
-  width: 100%;
+
+/*overall default format h1-h4, paragraph, mobile*/
+h1 {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 30px;
+  margin-left: 30px;
+  margin-bottom: 50px;
+  color: #d4314b;
 }
 
-@media screen and (max-width: 570px) {
+h2 {
+  font-family: "Tajawal", sans-serif;
+  font-size: 16px;
+  margin-left: 20px;
+  color: #020608;
+}
+h3,
+h4,
+p {
+  font-family: "Tajawal", sans-serif;
+  font-size: 14px;
+  margin-left: 20px;
+  color: #020608;
+}
+
+/*overall default format h1-h4, paragraph, desktop*/
+@media screen and (min-width: 800px) and (min-height: 600px) {
   h1 {
-    font-size: 30px;
+    font-size: 40px;
   }
 }
-@media screen and (max-width: 450px) {
-  h1 {
+@media screen and (min-width: 800px) and (min-height: 600px) {
+  h2 {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 800px) and (min-height: 600px) {
+  h3,
+  h4,
+  p {
     font-size: 20px;
   }
 }
-/*overall format h2-h4, paragraph styles*/
-h1 {
-  font-family: "IBM Plex Serif", serif;
-  font-size: 40px;
-  margin-left: 30px;
-}
-h2 {
-  font-family: "Tajawal", sans-serif;
-  font-size: 24px;
-  margin-left: 20px;
-}
-h3 {
-  font-family: "Tajawal", sans-serif;
-}
-h4 {
-  font-family: "Tajawal", sans-serif;
-}
-p {
-  font-family: "Tajawal", sans-serif;
-  margin-left: 20px;
+
+/*h1 formatting for galaxy fold*/
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
 }
 
-/*format footer for all pages*/
+/*format header flex*/
+header {
+  width: 100%;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+}
+body {
+  background-color: #fcfcfc;
+}
+
+/*format footer for all size*/
 footer {
   position: fixed;
   bottom: 0;
@@ -54,112 +80,74 @@ footer {
   font-family: "Tajawal", sans-serif;
   width: 100%;
   font-size: 16px;
-  background-color: grey;
+  background-color: #ffb2be;
   border-radius: 4px;
   text-decoration: none;
-  color: white;
-  font-family: "Tajawal", sans-serif;
+  color: #020608;
+  font-weight: 600;
 }
 
 footer > a:-webkit-any-link {
-  color: white;
+  color: #020608;
 }
 .fa {
   padding-left: 20px;
 }
 
-/*format nav bar all pages*/
+footer > a:hover {
+  color: #358cbf;
+}
+
+/*format nav bar all mobile*/
 nav {
   font-family: "Tajawal", sans-serif;
-  border-radius: 20px;
+  font-size: 14px;
   float: right;
-}
-@media screen and (max-width: 450px) {
-  nav {
-    font-size: 10px;
-  }
-}
-.not_active {
   background-color: #fcfcfc;
-  padding-right: 20px;
-  padding-left: 20px;
+  border-radius: 4px;
+}
+.not_active,
+.active {
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: #fcfcfc;
+}
+nav > a.not_active:hover {
+  background-color: #358cbf;
+  border-radius: 4px;
+  color: #fcfcfc;
 }
 
-.active {
-  border-color: #f7f8fa;
+nav > a.active {
   border-style: inset;
   border-radius: 4px;
-  padding-right: 20px;
-  padding-left: 20px;
-  border-width: 1px;
+  border-color: #358cbf;
+  border-width: 2px;
+  color: #112d3e;
+}
+/*format nav bar desktop*/
+@media screen and (min-width: 800px) {
+  .not_active,
+  .active {
+    padding-right: 20px;
+  }
 }
 
-/*Homepage formatting for mobile screen*/
-.Home1 {
-  width: 100%;
-  height: 60%;
-  font-size: 15px;
-  margin-left: 10px;
-}
-/*Homepage formatting for desktop*/
-@media screen and (min-width: 950px) {
-  .Home1 {
-    width: 72%;
-    font-size: 20px;
-    padding: 50px 10px 10px 10px;
+@media screen and (min-width: 800px) {
+  nav {
+    font-size: 16px;
   }
-}
-@media screen and (min-height: 900px) {
-  .Home1 {
-    margin-top: 100px;
-  }
-}
-.Home1 > h2 {
-  margin-top: 50px;
-}
-/*Homepage formatting for mobile screen*/
-.Home2 {
-  width: 100%;
-  height: auto;
-  position: fixed;
-  bottom: 15%;
-}
-/*Homepage formatting for desktop*/
-@media screen and (min-width: 950px) {
-  .Home2 {
-    width: 25%;
-    position: relative;
-  }
-}
-@media screen and (min-height: 900px) {
-  .Home2 {
-    margin-top: 100px;
-  }
-}
-/*image format - homepage*/
-.MyAvatar {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: pink;
-  border-radius: 50%;
-  margin-bottom: 2%;
-}
-
-.skillslogo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /*default link styles*/
 a:visited {
   text-decoration: none;
-  color: darkslategrey;
+  color: 020608;
   font-family: "Tajawal", sans-serif;
 }
 a:-webkit-any-link {
   text-decoration: none;
+  color: #020608;
 }
 
 @media screen and (max-width: 700px) {
@@ -168,14 +156,77 @@ a:-webkit-any-link {
   }
 }
 
+/*Homepage formatting for mobile screen*/
+.Home1 {
+  width: 100%;
+  height: 60%;
+  margin-left: 10px;
+}
+.Home2 {
+  width: 100%;
+  height: auto;
+}
+
+/*Homepage formatting for desktop*/
+@media screen and (min-width: 950px) {
+  .Home1 {
+    width: 60%;
+    margin-right: 10%;
+  }
+}
+@media screen and (min-height: 900px) {
+  .Home1 {
+    margin-top: 100px;
+  }
+}
+@media screen and (min-width: 950px) {
+  .Home2 {
+    width: 25%;
+    height: 330px;
+    border-width: 2px;
+    background-color: #358cbf;
+    border-radius: 50%;
+    margin-right: 2%;
+  }
+}
+@media screen and (min-height: 900px) {
+  .Home2 {
+    margin-top: 100px;
+  }
+}
+/*image format - homepage desktop*/
+.MyAvatar {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  margin-bottom: 2%;
+}
+/*image format - homepage desktop*/
+
+.skillslogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*About page formatting for mobile */
 .About1 {
   width: 100%;
   height: auto;
-  padding: 10px 30px 10px 20px;
-  display: block;
   font-size: 12px;
   display: block;
+}
+.About2 > p {
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/*About page formatting - images*/
+.About2 > picture > img {
+  border-radius: 4px;
+  margin-bottom: 1%;
 }
 /*About page formatting for desktop */
 @media screen and (min-width: 950px) {
@@ -186,163 +237,222 @@ a:-webkit-any-link {
   }
 }
 @media screen and (min-height: 900px) {
-  .About1 {
+  .About1,
+  .About2 {
     margin-top: 100px;
   }
 }
-/*About page formatting for mobile (default) */
-.About2 > p {
-  text-align: center;
+@media screen and (min-width: 950px) {
+  .About2 {
+    width: 34%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 950px) {
+  .About2 > picture > img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 /*About page formatting for mobile (galaxyfold) */
-@media screen and (max-width: 280px) {
+@media screen and (max-width: 300px) {
+  .About1 > p {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 300px) {
   .About2 {
-    position: fixed;
     bottom: 10%;
   }
 }
 
-/*About page formatting for desktop */
-@media screen and (min-width: 950px) {
-  .About2 {
-    width: 30%;
-    display: block;
-    margin-top: 50px;
-  }
-}
-@media screen and (min-height: 900px) {
-  .About2 {
-    margin-top: 100px;
-  }
-}
-/*About page formatting - images*/
-.About2 > picture > img {
-  border-radius: 4px;
-}
-
 /* Work & Study page formatting*/
 .CV {
-  padding: 10px;
-}
-@media screen and (min-height: 900px) {
-  .CV {
-    padding-top: 100px;
-  }
+  padding: 0px 10px 10px 10px;
 }
 .CV > p {
-  font-size: 20px;
-  width: 100%;
+  margin-top: 0px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 6px;
+  color: #112d3e;
+  font-family: "IBM Plex Serif", serif;
 }
 .study {
   width: 100%;
-  float: left;
-  text-align: left;
-  margin-bottom: 10%;
+  text-align: center;
+}
+.work {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15%;
 }
 
-@media screen and (min-width: 900px) {
-  .study {
-    width: 25%;
-  }
-}
-.study > p {
+.study > p,
+.work > p {
   margin: 0;
   margin-left: 20px;
   margin-bottom: 5px;
+  font-size: 14px;
 }
-.study > h2 {
+.study > h2,
+.work > h2 {
   text-transform: uppercase;
-  font-size: 18px;
   margin-top: 0px;
+  font-size: 16px;
 }
-.study > h3 {
+.study > h3,
+.work > h3 {
   margin: 0;
   margin-left: 20px;
-  margin-top: 20px;
+  margin-top: 8px;
+  font-size: 16px;
 }
 
-.study > h4 {
+.study > h4,
+.work > h4 {
   margin: 0;
   margin-left: 20px;
+  font-size: 16px;
 }
 
-.work {
-  width: 100%;
-  float: right;
-  text-align: left;
-  margin-bottom: 2%;
+/* CV page formatting desktop*/
+@media screen and (min-height: 950px) {
+  .CV {
+    padding-top: 90px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .CV > p {
+    text-align: right;
+    margin-right: 5%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .study {
+    width: 25%;
+    float: left;
+  }
 }
 @media screen and (min-width: 900px) {
   .work {
-    width: 70%;
+    width: 60%;
     margin-left: 5%;
+    margin-right: 5%;
+    float: right;
   }
 }
-.work > p {
-  margin: 0;
-  line-height: 18px;
-}
-.work > h3 {
-  margin: 0;
-  margin-top: 15px;
-}
-.work > h2 {
-  margin: 0;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  font-size: 18px;
-}
-.work > h4 {
-  margin: 0;
-}
-/*Blog menu page display formatting, carried over to main blog page with articles*/
-
-.blogWrap {
+/*Blog page display formatting*/
+.blogmenu {
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding-top: 50px;
 }
-@media screen and (min-height: 900px) {
-  .blogWrap {
-    margin-top: 100px;
-  }
+.blogmenu > ul > h2 {
+  text-align: left;
+  padding-left: 10px;
+  margin-left: -40px;
+  border-radius: 6px;
+  color: #112d3e;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: "IBM Plex Serif", serif;
 }
-article {
-  display: inline;
-  width: 15%;
-  text-align: center;
-}
-@media screen and (max-width: 900px) {
-  article {
-    width: 23%;
-    padding: 2%;
-  }
-}
-@media screen and (max-width: 400px) {
-  article {
-    width: 30%;
-    padding: 1%;
-  }
-}
-@media screen and (max-width: 300px) {
-  article {
-    width: 40%;
-    padding: 1%;
-  }
-}
-.Blogs > h2 {
-  padding: 20px;
-}
-/*Blog menu page link styles*/
-
-article > a:link {
-  text-decoration: underline;
-  font-weight: bold;
-  color: darkslategrey;
+ul {
+  margin-top: 2%;
+  margin-bottom: 5%;
+  display: inline-block;
+  width: 100%;
   font-family: "Tajawal", sans-serif;
+  list-style-type: lower-roman;
+  text-align: left;
+  margin-left: 2%;
+  font-size: 14px;
+  line-height: 40px;
 }
 
+.blog_1,
+.blog_2,
+.blog_3,
+.blog_4,
+.blog_5 {
+  width: 100%;
+  margin: 1%;
+}
+.blog_1 > h3,
+.blog_2 > h3,
+.blog_3 > h3,
+.blog_4 > h3,
+.blog_5 > h3 {
+  width: 100%;
+  margin: 1%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.blog_1 > p,
+.blog_3 > p,
+.blog_5 > p {
+  width: 70%;
+  float: right;
+  text-align: justify;
+}
+.blog_5 {
+  margin-bottom: 10%;
+}
+.blog_1 {
+  margin-top: 15%;
+}
+.blog_1 > picture > img,
+.blog_3 > picture > img,
+.blog_5 > picture > img {
+  float: left;
+}
+.blog_2,
+.blog_4 {
+  width: 100%;
+  margin: 1%;
+}
+.blog_2 > p,
+.blog_4 > p {
+  width: 70%;
+  float: left;
+  text-align: justify;
+}
+.blog_2 > picture > img,
+.blog_4 > picture > img {
+  float: right;
+}
+
+/*Blog page for desktop*/
+@media screen and (min-width: 800px) {
+  ul {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .blogmenu > ul > h2 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .blog_2 > p,
+  .blog_4 > p {
+    width: 90%;
+    float: left;
+    text-align: justify;
+  }
+}
+@media screen and (min-width: 800px) {
+  .blog_1 > p,
+  .blog_3 > p,
+  .blog_5 > p {
+    width: 90%;
+    float: right;
+    text-align: justify;
+  }
+}
 /*Contact page*/
 /*Contact page formatting for mobile*/
 .contactsection {
@@ -379,11 +489,17 @@ input[type="text"],
   padding: 1%;
   margin-bottom: 2%;
   font-family: "Tajawal", sans-serif;
+  border-color: #112d3e;
+  border-width: 1px;
+  border-radius: 4px;
 }
 
 #message {
   width: 101.7%;
   font-family: "Tajawal", sans-serif;
+  border-color: #112d3e;
+  border-width: 1px;
+  border-radius: 4px;
 }
 
 input [type="submit"] {
@@ -394,51 +510,25 @@ input [type="submit"] {
   display: block;
   margin-top: 2%;
   font-family: "Tajawal", sans-serif;
+  background-color: #112d3e;
+  color: #fcfcfc;
+  border-radius: 4px;
+  border-style: none;
+  padding: 1%;
+}
+.send:hover {
+  background-color: #358cbf;
+}
+::placeholder {
+  color: #020608;
+  font-weight: 500;
 }
 
 /*image format - contactpage*/
 .MyAvatarContact {
-  background-color: pink;
+  background-color: #ffb2be;
   border-radius: 50%;
   margin-bottom: 5%;
   float: right;
   margin-right: 5%;
-}
-
-/*Blog page(with articles)*/
-.blog_right {
-  width: 100%;
-  margin: 1%;
-}
-.blog_right > p {
-  width: 70%;
-  float: right;
-  text-align: left;
-}
-
-@media screen and (min-width: 800px) {
-  .blog_right > p {
-    width: 80%;
-  }
-}
-.blog_right > picture > img {
-  float: left;
-}
-.blog_left {
-  width: 100%;
-  margin: 1%;
-}
-.blog_left > p {
-  width: 70%;
-  float: left;
-  text-align: right;
-}
-
-@media screen and (min-width: 800px) {
-  .blog_left > p {
-    width: 80%;
-  }
-}
-.blog_left > picture > img {
-  float: right;
 }
