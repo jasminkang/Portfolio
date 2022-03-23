@@ -2,34 +2,34 @@
 
 /*overall default flexbox*/
 .flex-container {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  width: 100%;
 }
 
 /*overall default format h1-h4, paragraph, mobile*/
 h1 {
+  color: #d4314b;
   font-family: "IBM Plex Serif", serif;
   font-size: 30px;
   margin-left: 30px;
   margin-bottom: 50px;
-  color: #d4314b;
 }
 
 h2 {
+  color: #020608;
   font-family: "Tajawal", sans-serif;
   font-size: 16px;
   margin-left: 20px;
-  color: #020608;
 }
 h3,
 h4,
 p {
+  color: #020608;
   font-family: "Tajawal", sans-serif;
   font-size: 14px;
   margin-left: 20px;
-  color: #020608;
 }
 
 /*overall default format h1-h4, paragraph, desktop*/
@@ -61,9 +61,9 @@ p {
 
 /*format header flex*/
 header {
-  width: 100%;
   background-color: #fcfcfc;
   border-radius: 4px;
+  width: 100%;
 }
 body {
   background-color: #fcfcfc;
@@ -71,20 +71,20 @@ body {
 
 /*format footer for all size*/
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  padding-top: 15px;
-  height: 40px;
-  text-align: center;
-  font-family: "Tajawal", sans-serif;
-  width: 100%;
-  font-size: 16px;
   background-color: #ffb2be;
   border-radius: 4px;
-  text-decoration: none;
+  bottom: 0;
   color: #020608;
+  font-family: "Tajawal", sans-serif;
+  font-size: 16px;
   font-weight: 600;
+  height: 40px;
+  left: 0;
+  padding-top: 15px;
+  position: fixed;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
 }
 
 footer > a:-webkit-any-link {
@@ -100,36 +100,36 @@ footer > a:hover {
 
 /*format nav bar all mobile*/
 nav {
-  font-family: "Tajawal", sans-serif;
-  font-size: 14px;
-  float: right;
   background-color: #fcfcfc;
   border-radius: 4px;
+  float: right;
+  font-family: "Tajawal", sans-serif;
+  font-size: 14px;
 }
 .not_active,
 .active {
+  background-color: #fcfcfc;
   padding-right: 10px;
   padding-left: 10px;
-  background-color: #fcfcfc;
 }
 nav > a.not_active:hover {
   background-color: #358cbf;
   border-radius: 4px;
   color: #fcfcfc;
 }
-
 nav > a.active {
-  border-style: inset;
-  border-radius: 4px;
   border-color: #358cbf;
-  border-width: 2px;
-  color: #112d3e;
+  border-radius: 4px;
+  border-style: inset;
+  border-width: 1px;
+  color: #020608;
 }
 /*format nav bar desktop*/
 @media screen and (min-width: 800px) {
   .not_active,
   .active {
     padding-right: 20px;
+    padding-left: 20px;
   }
 }
 
@@ -142,18 +142,12 @@ nav > a.active {
 /*default link styles*/
 a:visited {
   text-decoration: none;
-  color: 020608;
+  color: #020608;
   font-family: "Tajawal", sans-serif;
 }
 a:-webkit-any-link {
   text-decoration: none;
   color: #020608;
-}
-
-@media screen and (max-width: 700px) {
-  .contactsection {
-    height: 100px;
-  }
 }
 
 /*Homepage formatting for mobile screen*/
@@ -194,7 +188,7 @@ a:-webkit-any-link {
     margin-top: 100px;
   }
 }
-/*image format - homepage desktop*/
+/*image format - homepage*/
 .MyAvatar {
   display: block;
   margin-left: auto;
@@ -202,7 +196,7 @@ a:-webkit-any-link {
   border-radius: 50%;
   margin-bottom: 2%;
 }
-/*image format - homepage desktop*/
+/*image format - homepage*/
 
 .skillslogo {
   display: block;
@@ -216,17 +210,19 @@ a:-webkit-any-link {
   height: auto;
   font-size: 12px;
   display: block;
+  margin-left: 10px;
 }
-.About2 > p {
+.About2 > figcaption {
   text-align: center;
   font-size: 14px;
   text-transform: uppercase;
+  font-family: "Tajawal", sans-serif;
 }
 
 /*About page formatting - images*/
 .About2 > picture > img {
   border-radius: 4px;
-  margin-bottom: 1%;
+  margin-bottom: 5%;
 }
 /*About page formatting for desktop */
 @media screen and (min-width: 950px) {
@@ -268,17 +264,24 @@ a:-webkit-any-link {
   }
 }
 
-/* Work & Study page formatting*/
+/* Work & Study page formatting default*/
 .CV {
-  padding: 0px 10px 10px 10px;
+  padding: 0 10px 10px 10px;
 }
-.CV > p {
-  margin-top: 0px;
+.CV > h2 {
+  margin-top: 0;
   font-size: 16px;
   text-align: center;
   border-radius: 6px;
   color: #112d3e;
   font-family: "IBM Plex Serif", serif;
+}
+.CV a:-webkit-any-link {
+  font-weight: 900;
+  color: #112d3e;
+}
+.CV a:hover {
+  color: #d4314b;
 }
 .study {
   width: 100%;
@@ -300,7 +303,7 @@ a:-webkit-any-link {
 .study > h2,
 .work > h2 {
   text-transform: uppercase;
-  margin-top: 0px;
+  margin-top: 0;
   font-size: 16px;
 }
 .study > h3,
@@ -320,12 +323,12 @@ a:-webkit-any-link {
 
 /* CV page formatting desktop*/
 @media screen and (min-height: 950px) {
-  .CV {
+  .CVlink {
     padding-top: 90px;
   }
 }
 @media screen and (min-width: 800px) {
-  .CV > p {
+  .CVlink > h2 {
     text-align: right;
     margin-right: 5%;
   }
@@ -344,34 +347,32 @@ a:-webkit-any-link {
     float: right;
   }
 }
-/*Blog page display formatting*/
+/*Blog page display formatting mobile*/
 .blogmenu {
   width: 100%;
   display: flex;
 }
-.blogmenu > ul > h2 {
+.blogmenu > h2 {
   text-align: left;
   padding-left: 10px;
-  margin-left: -40px;
   border-radius: 6px;
   color: #112d3e;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 12px;
   font-family: "IBM Plex Serif", serif;
+  width: 30%;
 }
 ul {
   margin-top: 2%;
   margin-bottom: 5%;
-  display: inline-block;
-  width: 100%;
   font-family: "Tajawal", sans-serif;
   list-style-type: lower-roman;
   text-align: left;
   margin-left: 2%;
-  font-size: 14px;
-  line-height: 40px;
+  font-size: 12px;
+  line-height: 20px;
+  width: 70%;
 }
-
 .blog_1,
 .blog_2,
 .blog_3,
@@ -427,12 +428,14 @@ ul {
 /*Blog page for desktop*/
 @media screen and (min-width: 800px) {
   ul {
-    font-size: 20px;
+    line-height: 40px;
+    font-size: 18px;
   }
 }
 @media screen and (min-width: 800px) {
-  .blogmenu > ul > h2 {
-    font-size: 22px;
+  .blogmenu > h2 {
+    font-size: 20px;
+    width: 40%;
   }
 }
 
@@ -463,7 +466,12 @@ ul {
   height: auto;
   margin-top: 10%;
   margin-right: 20px;
-  margin-left: 20px;
+  margin-left: 10px;
+}
+@media screen and (max-width: 700px) {
+  .contactsection {
+    height: 100px;
+  }
 }
 /*Contact page formatting for desktop*/
 @media screen and (min-width: 800px) {
@@ -473,13 +481,15 @@ ul {
     margin-top: 1%;
   }
 }
+.contactform {
+  width: 60%;
+  margin-left: 15px;
+}
+
 @media screen and (min-height: 900px) {
   .contactsection {
     margin-top: 100px;
   }
-}
-.contactform {
-  width: 60%;
 }
 
 input[type="text"],
@@ -495,7 +505,7 @@ input[type="text"],
 }
 
 #message {
-  width: 101.7%;
+  width: 101.5%;
   font-family: "Tajawal", sans-serif;
   border-color: #112d3e;
   border-width: 1px;
@@ -530,5 +540,10 @@ input [type="submit"] {
   border-radius: 50%;
   margin-bottom: 5%;
   float: right;
-  margin-right: 5%;
+  margin-right: 1%;
+}
+@media screen and (min-width: 800px) {
+  .MyAvatarContact {
+    margin-right: 10%;
+  }
 }
