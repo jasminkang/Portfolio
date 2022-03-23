@@ -33,56 +33,55 @@
   </head>
   <body>
     <nav class="topnav">
-      <a class="not_active" href="Index.html">Home</a>
+      <a class="active" href="Index.html">Home</a>
       <a class="not_active" href="PersonSkills.html">About</a>
       <a class="not_active" href="CV.html">Work/Study</a>
       <a class="not_active" href="Blogs.html">Blog</a>
-      <a class="active" href="Contact.html">Contact</a>
+      <a class="not_active" href="Contact.html">Contact</a>
     </nav>
     <div class="flex-container">
       <header>
         <h1>Jasmin Kang.<br />Junior full stack developer.</h1>
       </header>
-      <section class="contactsection">
-        <h2>Let's connect!&#128075;&#127997;</h2>
+      <section class="Home1">
+        <h2>Welcome to my portfolio!</h2>
+        <p>
+          Thank you for visiting! I am a junior web developer based in Naarm
+          (Melbourne). I love to combine all things logic, creative, inclusive
+          and accessible to make engaging websites.
+        </p>
+        <p>
+          Click around to find out more about me and what I can bring to your
+          company.
+        </p>
+        <h2>
+          &#128284; I'm no longer growing...but my portfolio is! Watch this space
+          for my projects  &#10024;.
+        </h2>
+      </section>
+      <section class="Home2">
         <picture>
           <source
             srcset="Images/Avatar_nobackground.png"
-            media="(min-width: 800px)"
+            media="(min-width: 750px)"
           />
           <img
-            class="MyAvatarContact"
+            class="MyAvatar"
             src="Images/Avatar_nobackground_small.png"
             alt="Avatar of smiling woman with brown skin and black hair"
           />
         </picture>
-        <p>
-          If you want to catch up, contact me on linked in, github or right
-          here:
-        </p>
-        <form class="contactform" action="mailto:jasminindar.k@gmail.com">
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="name"
-            required
+        <picture>
+          <source
+            srcset="Images/skillslogo_big.png"
+            media="(min-width: 750px) and (min-height: 600px)"
           />
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="email"
-            required
+          <img
+            class="skillslogo"
+            src="Images/skillslogo_small.png"
+            alt="HTML, CSS and JS logos"
           />
-          <textarea
-            name="message"
-            id="message"
-            placeholder="message"
-            required
-          ></textarea>
-          <button class="send" value="submit">send message</button>
-        </form>
+        </picture>
       </section>
       <footer>
         Created by &copy;Jasmin Kang 2022
